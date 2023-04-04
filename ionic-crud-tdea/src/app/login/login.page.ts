@@ -29,7 +29,7 @@ export class LoginPage implements OnInit {
     
     if (this.formValidation()) {
       let loader = await this.loadingCtrl.create({
-        message: "Espere un momento por favor..."
+        message: "Espere un momento estamos trabajando en cargar su infomacion..."
       });
       await loader.present();
 
@@ -42,7 +42,7 @@ export class LoginPage implements OnInit {
         })
         
       } catch (e:any) {
-        e.message = "Usuario no registrado";
+        e.message = "Usuario aun no esta registrado";
         let errorMessage = e.message || e.getLocalizedMessage();
         
         this.showToast(errorMessage);     
@@ -54,12 +54,12 @@ export class LoginPage implements OnInit {
 
   formValidation() {
     if (!this.user.email) {
-      this.showToast("Ingrese un correo");
+      this.showToast("Ingrese un correo por favor");
       return false;
     }
 
     if (!this.user.password) {
-      this.showToast("Ingrese una contraseña");
+      this.showToast("Ingrese una contraseña por favor");
       return false;
     }
 
@@ -69,7 +69,7 @@ export class LoginPage implements OnInit {
   showToast(message: string) {
     this.toastCtrl.create({
       message: message,
-      duration: 5000 // Aumenta la duración del mensaje a 5 segundos
+      duration: 6000 // Aumenta la duración del mensaje a 6 segundos
     }).then(toastData => toastData.present());
   }
 

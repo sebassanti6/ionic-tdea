@@ -85,7 +85,7 @@ export class EditPagePage implements OnInit {
   showToast(message: string) {
     this.toastCtrl.create({
       message: message,
-      duration: 5000 // Aumenta la duración del mensaje a 5 segundos
+      duration: 6000 // Aumenta la duración del mensaje a 5 segundos
     }).then(toastData => toastData.present());
   }
   

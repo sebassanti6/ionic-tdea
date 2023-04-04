@@ -25,7 +25,7 @@ export class HomePage {
 
   async getPosts(){
     let loader = await this.loadingCtrl.create({
-      message: "Espere un momento por favor..."
+      message: "Espere un momento estamos trabajando en cargar su infomacion..."
     });
     await loader.present();
 
@@ -45,7 +45,7 @@ export class HomePage {
       
       await loader.dismiss();
     } catch (e:any) {
-      e.message = "mensaje de error del home";
+      e.message = "hay un error en el inicio";
       let errorMessage = e.message || e.getLocalizedMessage();
         
         this.showToast(errorMessage); 
@@ -54,7 +54,7 @@ export class HomePage {
 
   async deletePost(id: string){    
     let loader = await this.loadingCtrl.create({
-      message: "Espere un momento por favor..."
+      message: "Espere un momento estamos trabajando en cargar su infomacion..."
     });
     await loader.present();
 
@@ -66,7 +66,7 @@ export class HomePage {
   showToast(message: string) {
     this.toastCtrl.create({
       message: message,
-      duration: 5000 // Aumenta la duración del mensaje a 5 segundos
+      duration: 6000 // Aumenta la duración del mensaje a 6 segundos
     }).then(toastData => toastData.present());
   }
 }
