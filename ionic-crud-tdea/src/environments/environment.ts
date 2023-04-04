@@ -6,13 +6,13 @@
 export const environment = {
   production: false,
   FIREBASE_CONFIG:{
-  apiKey: "",
-  authDomain: "",
-  projectId: "",
-  storageBucket: "",
-  messagingSenderId: "",
-  appId: "",
-  measurementId: ""
+  apiKey: "AIzaSyBp5eWgRbrk3dedJS1ZR6MgrNXpnjynMNU",
+  authDomain: "ionic-crud-tdea-cdf73.firebaseapp.com",
+  projectId: "ionic-crud-tdea-cdf73",
+  storageBucket: "ionic-crud-tdea-cdf73.appspot.com",
+  messagingSenderId: "540617185222",
+  appId: "1:540617185222:web:4a044d0cc99fbd08c684c7",
+  measurementId: "G-CFE496GWJH"
   }
 };
 
